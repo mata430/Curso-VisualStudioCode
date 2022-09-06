@@ -15,7 +15,11 @@
   - [Ventanas cerrar abrir](#ventanas-cerrar-abrir)
   - [**Multi cursor**](#multi-cursor)
   - [Clonar lineas](#clonar-lineas)
+  - [Volver a seleccionar](#volver-a-seleccionar)
   - [Crear cursores arriba y abajo](#crear-cursores-arriba-y-abajo)
+  - [Seleccionar toda la linea](#seleccionar-toda-la-linea)
+  - [Multi cursor en lineas no censcutivas](#multi-cursor-en-lineas-no-censcutivas)
+  - [Comparar codigo de forma rapida y automatica](#comparar-codigo-de-forma-rapida-y-automatica)
   - [Multi cursor **Copy**](#multi-cursor-copy)
   - [Multi cursor para formato](#multi-cursor-para-formato)
   - [Multi cursor Lowercase y Uppercase](#multi-cursor-lowercase-y-uppercase)
@@ -85,53 +89,16 @@ Alt + ↑ / ↓
 
 Colocar el cursor en la linea a comentar
 
-```js
-    Tips:
-        ⌘ /
-        Ctrl + /
-*/
-
-const a = 10;
-const b = 20;
-const c = { a, b };
-
-
-const a = 30;
-const b = 40;
-const c = { a, b };
-
-
-console.log( a, b, c );
-
-// Resultado final
-// Sólo dejar un bloque comentado
-```
 
     Tips:
         ⌘ /
         ⇧ ⌥ A
-        Ctrl + /
-        Shift + Alt + A
+        Ctrl + ,
 
--->
+Selecionar el bloque a comentar
 
-<div>
-    <span>Hola</span>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Eum maiores nostrum cum quasi totam.
-    </p>
-</div>
+        Ctrl + .
 
-<h1>Objetivo final</h1>
-
-<div>
-    <span>Hola</span>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Eum maiores nostrum cum quasi totam.
-    </p>
-</div>
 
 ## Nuevo archivo
 
@@ -252,7 +219,7 @@ Buscamos el comando y dar doble click y escribir el atajo y enter.
 tips:
 ⇧ ⌘ P
 Ctrl + SHIFT + P
-shorcut personalizado: Ctrl + a
+shorcut personalizado: Alt + a
 
         Buscar: Wrap with abbreviation
                 debe de quedar el ng serve así
@@ -295,18 +262,13 @@ shorcut personalizado: Ctrl + a
         Copy line down
         ⌘ K ⌘ S
         Ctrl + K Ctrl + S
+        Shift + Alt + ⬇️
+        Alt + d
 
--->
+## Volver a seleccionar
 
-<span>Hola</span>
-
-<!-- Objetivo -->
-
-<span>Hola</span>
-<span>Hola</span>
-<span>Hola</span>
-<span>Hola</span>
-<span>Hola</span>
+    Tips:
+        Ctrl + u
 
 ## Crear cursores arriba y abajo
 
@@ -314,20 +276,29 @@ shorcut personalizado: Ctrl + a
         ⇧ ⌥ ↑ / ↓
         Ctrl + Alt+ ↑ / ↓
 
--->
+## Seleccionar toda la linea
 
-<!-- Desde aquí -->
+    Tips:
+        Cmd + l
+        Ctrl + l
 
-<!-- Hasta aquí -->
+## Multi cursor en lineas no censcutivas
 
-<!-- Objetivo -->
+    Tips:
+        option presionado y click donde queremos el cursor
+        Alt presionado y click donde queremos el cursor
+        para deseleccionar solo manten precionado alt y vuelve a dar click
 
-<li>Hola Mundo</li>
-<li>Hola Mundo</li>
-<li>Hola Mundo</li>
-<li>Hola Mundo</li>
-<li>Hola Mundo</li>
-<li>Hola Mundo</li>
+## Comparar codigo de forma rapida y automatica
+
+1. Elegir los dos archivos a comparar
+2. Shift + Ctrl + p
+3. Escribimos compare Active File With...
+4. Elejimos con que archivo lo queremos comprarar
+
+
+
+
 
 ## Multi cursor **Copy**
 
