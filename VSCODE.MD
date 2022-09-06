@@ -33,6 +33,18 @@
   - [Snippets basicos](#snippets-basicos)
   - [Extencion TODO](#extencion-todo)
   - [Extencion Bookmarks](#extencion-bookmarks)
+  - [**Emmet**](#emmet)
+  - [Estructura básica de HTML](#estructura-básica-de-html)
+  - [Nodos hermanos](#nodos-hermanos)
+  - [Nodos superiores](#nodos-superiores)
+  - [Multiplicadores](#multiplicadores)
+  - [Agrupación](#agrupación)
+  - [Atributos id y class](#atributos-id-y-class)
+  - [Atributos HTML](#atributos-html)
+  - [Elementos numerados](#elementos-numerados)
+  - [Elementos numerados personalizados](#elementos-numerados-personalizados)
+  - [Contenido HTML](#contenido-html)
+  - [Configuración inicial](#configuración-inicial)
 
 ## Movimintos de lineas
 
@@ -89,7 +101,6 @@ Alt + ↑ / ↓
 
 Colocar el cursor en la linea a comentar
 
-
     Tips:
         ⌘ /
         ⇧ ⌥ A
@@ -98,7 +109,6 @@ Colocar el cursor en la linea a comentar
 Selecionar el bloque a comentar
 
         Ctrl + .
-
 
 ## Nuevo archivo
 
@@ -295,10 +305,6 @@ shorcut personalizado: Alt + a
 2. Shift + Ctrl + p
 3. Escribimos compare Active File With...
 4. Elejimos con que archivo lo queremos comprarar
-
-
-
-
 
 ## Multi cursor **Copy**
 
@@ -593,6 +599,209 @@ function gritar() {
 //FIXME: EJEMPLO 2
 // TODO: EJEMPLO
 
-##  Extencion Bookmarks
+## Extencion Bookmarks
 
 Ctrl + Alt + k
+
+## **Emmet**
+
+## Estructura básica de HTML
+
+Escribe ! o html:5
+
+```html
+nav>ul>li
+
+<nav>
+  <ul>
+    <li></li>
+  </ul>
+</nav>
+```
+
+## Nodos hermanos
+
+Usa el +
+
+```html
+div+p+span
+
+<div></div>
+<p></p>
+<span></span>
+```
+
+## Nodos superiores
+
+Usa el ^
+
+```html
+ul>li>div+p^li>span
+
+<ul>
+  <li>
+    <div></div>
+    <p></p>
+  </li>
+  <li><span></span></li>
+</ul>
+
+ul>li>div+p^^p
+
+<ul>
+  <li>
+    <div></div>
+    <p></p>
+  </li>
+</ul>
+<p></p>
+```
+
+## Multiplicadores
+
+Usa el \*
+
+```html
+ul>li*5>p
+
+<ul>
+  <li>
+    <p></p>
+  </li>
+  <li>
+    <p></p>
+  </li>
+  <li>
+    <p></p>
+  </li>
+  <li>
+    <p></p>
+  </li>
+  <li>
+    <p></p>
+  </li>
+</ul>
+```
+
+## Agrupación
+
+Usa los ( )
+
+```html
+ul>li>(p+span)*2
+
+<ul>
+  <li>
+    <p></p>
+    <span></span>
+    <p></p>
+    <span></span>
+  </li>
+</ul>
+```
+
+## Atributos id y class
+
+Usa el # para identificadores y el . para clases
+
+```html
+ul>li>p.text-center#first
+
+<ul>
+  <li>
+    <p class="text-center" id="first"></p>
+  </li>
+</ul>
+
+ul>li>p.text-center.bg-blue#first
+
+<ul>
+  <li>
+    <p class="text-center bg-blue" id="first"></p>
+  </li>
+</ul>
+```
+
+## Atributos HTML
+
+Usa el [ ]
+
+```html
+ul>li*3>a[target="_blank"]
+
+<ul>
+  <li><a href="" target="_blank"></a></li>
+  <li><a href="" target="_blank"></a></li>
+  <li><a href="" target="_blank"></a></li>
+</ul>
+
+ul>li*3>a[target="_blank" role="link"]
+
+<ul>
+  <li><a href="" target="_blank" role="link"></a></li>
+  <li><a href="" target="_blank" role="link"></a></li>
+  <li><a href="" target="_blank" role="link"></a></li>
+</ul>
+```
+
+## Elementos numerados
+
+Usa el $
+
+```html
+ul>li.item$*2>p
+
+<ul>
+  <li class="item1">
+    <p></p>
+  </li>
+  <li class="item2">
+    <p></p>
+  </li>
+</ul>
+```
+
+## Elementos numerados personalizados
+
+Usa el @
+
+```html
+ul>li.item$@10*2>p
+
+<ul>
+  <li class="item10">
+    <p></p>
+  </li>
+  <li class="item11">
+    <p></p>
+  </li>
+</ul>
+```
+
+## Contenido HTML
+
+Usa los { }
+
+```html
+h1{Hola soy tu amigo y docente digital}
+
+<h1>Hola soy tu amigo y docente digital</h1>
+
+ul>li*3>a{Sección $}
+
+<ul>
+  <li><a href="">Sección 1</a></li>
+  <li><a href="">Sección 2</a></li>
+  <li><a href="">Sección 3</a></li>
+</ul>
+```
+
+## Configuración inicial
+
+Para copiar la configuración en el archivo settings.json de tu VSCode, sólo debes:
+
+1. Ir al Menú File (Archivo),
+2. luego a Preferences (Preferencias),
+3. y seleccionar Settings (Configuraciones),
+4. ahí sólo da clic en el botón Open Settings (JSON) que está en la esquina superior derecha,
+5. y listo, copía la configuración que te sirva.
